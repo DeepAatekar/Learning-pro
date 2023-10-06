@@ -1,0 +1,14 @@
+package com.luv2code.springbootlibrary.utils;
+
+import java.util.Base64;
+
+public class ExtractJWT 
+{
+	public static String payloadJWTExtraction(String token) 
+	{
+		token.replace("Bearer", "");
+		
+		String[] chunks = token.split("\\.");
+		Base64.Decoder decoder = Base64.getUrlDecoder();
+	}
+}
